@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "no.appfabrikken.blixt"
-        version   = "1.0.3">
+        id        = "no.appfabrikken.vinogvinyl"
+        version   = "0.0.1">
 
-    <name>BLIXT</name>
+    <name>Vin og vinyl</name>
 
     <description>
-        BLIXT javascript version
+        #vinogvinyl
     </description>
 
     <author href="http://sondresallaup.com" email="support@sondresallaup.com">
@@ -22,8 +22,6 @@
 
     <preference name="phonegap-version" value="3.3.0" /> 
     <preference name="fullscreen" value="false" />
-
-    <gap:plugin name="org.apache.cordova.core.camera" />
     
     
     <feature name="http://api.phonegap.com/1.0/camera"/>
