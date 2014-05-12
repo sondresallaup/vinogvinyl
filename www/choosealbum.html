@@ -4,37 +4,39 @@
         <title>SondreSallaup.com</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" content="text/html; charset=UTF-8">
-        <link href = "../css/ionic.css" rel = "stylesheet">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href = "css/ionic.min.css" rel = "stylesheet">
     </head>
-    <body onload="checkIfLoggedIn()"  style="background-image:url('../img/signin/mountain.png');padding:5px;border:0px solid black;background-repeat:no-repeat;>">
+    <body>
 
-<div class="bar bar-header bar-positive">
+<div class="bar bar-header bar-assertive">
     <a class="button button-icon icon ion-navicon" href="settings.html"></a>
   <h1 class="title">Vin og vinyl</h1>
 </div><br><br><br>
 
-<div class="list">
-  <label class="item item-input">
-    <input type="text" placeholder="Brukernavn">
-  </label>
-  <label class="item item-input">
-    <input type="text" placeholder="Navn">
-  </label>
-    <label class="item item-input">
-    <input type="text" placeholder="Gruppe/artist">
-  </label>
-  <label class="item item-input">
-    <input type="text" placeholder="Album">
-  </label>
-    <button type="submit" class="button button-positive button-block">Velg</button>
-</div>
- 
+<form id="choosealbumForm" action="http://sondresallaup.com/vinogvinyl/functions/checkusername.php" method="POST">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Brukernavn" id="username">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Ditt fulle navn" id="name">
+      </label>
+        <label class="item item-input">
+        <input type="text" placeholder="Gruppe/artist" id="artist">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Album" id="album">
+      </label>
+        <button type="submit" class="button button-assertive button-block" id="submit">Velg</button>
+    </div>
+</form> 
+        
+<div id="ack"></div>
         
         
         
              
-<div class="tabs tabs-icon-only tabs-positive" id="footer">
+<div class="tabs tabs-icon-only tabs-assertive" id="footer">
           <a class="tab-item" href="main.html">
         <i class="icon ion-ios7-musical-notes"></i>
       </a>
@@ -45,7 +47,7 @@
         
 <script src="http://code.jquery.com/jquery-latest.js"></script>        
 <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-<script src="../js/userfunctions.js"></script>
+<script src="js/choosealbum.js"></script>
 <script>
 function goBack()
   {
