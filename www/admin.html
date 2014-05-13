@@ -10,13 +10,12 @@
 
 <div class="bar bar-header bar-assertive">
     <a class="button button-icon icon ion-ios7-arrow-back" href="javascript:void(0)" onclick="goBack();"></a>
-  <h1 class="title">Innstillinger</h1>
+  <h1 class="title">Administrator</h1>
 </div><br><br>
 
 <ul class="list">
     <li class="item">Copyright 2014 - Den lille appfabrikken</li>
     <li class="item">Sondre Ingebrigtsen Sallaup</li>
-     <a class="item item-icon-left" href="#" ng-click="showPasswordPrompt()"><i class="icon ion-ios7-locked"></i>Administrator</a>
 </ul>
         
         
@@ -35,6 +34,9 @@
 <script src="js/ionic.bundle.js"></script>
 <script src="js/admin.js"></script>
 <script>
+if(localStorage.getItem('admin') != "true"){
+    goBack();
+}
 function goBack()
   {
   window.history.back()
