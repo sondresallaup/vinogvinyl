@@ -67,7 +67,7 @@ angular.module('appfabrikken.vinogvinyl', ['ionic'])
               inputType: 'password',
               inputPlaceholder: 'Ditt passord'
             }).then(function(res) {
-              if(res == "passord"){
+              if(res == "bobmarley"){
                   localStorage.setItem('admin','true');
                   window.location.replace("admin.html");
                   }
