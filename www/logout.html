@@ -9,17 +9,18 @@
     <body ng-controller="PopupCtrl">
 
 <div class="bar bar-header bar-assertive">
-    <a class="button button-icon icon ion-ios7-arrow-back" href="javascript:void(0)" onclick="goBack();"></a>
-  <h1 class="title">Innstillinger</h1>
+    <a class="button button-icon icon ion-ios7-arrow-back" href="index.html"></a>
+  <h1 class="title">Vin og vinyl</h1>
 </div><br><br>
+<div class="card">
+  <div class="item item-divider">
+    Logget ut
+  </div>
+  <div class="item item-text-wrap">
+    Du er nå logget ut fra administratormodus
+  </div>
+</div>
 
-<ul class="list">
-    <li class="item">Copyright 2014 - Den lille appfabrikken</li>
-    <li class="item">Sondre Ingebrigtsen Sallaup</li>
-     <a class="item item-icon-left" href="#" ng-click="showPasswordPrompt()"><i class="icon ion-ios7-locked"></i>Administrator</a>
-    <a class="item item-icon-left" href="logout.html"><i class="icon ion-ios7-unlocked"></i>Logg ut fra admin</a>
-</ul>
-        
         
              
 <div class="tabs tabs-icon-only tabs-assertive" id="footer">
@@ -33,13 +34,8 @@
         
 <script src="http://code.jquery.com/jquery-latest.js"></script>        
 <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-<script src="js/ionic.bundle.js"></script>
-<script src="js/prompt.js"></script>
 <script>
-function goBack()
-  {
-  window.history.back()
-  }
+localStorage.setItem('admin','');
 </script> 
         
 </body>

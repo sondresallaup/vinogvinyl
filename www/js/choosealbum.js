@@ -8,7 +8,7 @@ $("button#submit").click( function() {
     $.post( $("#choosealbumForm").attr("action"),
 	        $("#choosealbumForm :input").serializeArray(),
 			function(data) {
-			  if(data == "true"){ // passer på at bruker
+			  if(data == "true" || localStorage.getItem('admin') == "true"){ // passer på at bruker
                   var Album = Parse.Object.extend("Album");
                   // sjekker om person allerede har valgt album
                   var query = new Parse.Query(Album);
