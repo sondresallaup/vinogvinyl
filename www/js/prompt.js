@@ -71,14 +71,17 @@ angular.module('appfabrikken.vinogvinyl', ['ionic'])
                   localStorage.setItem('admin','true');
                   window.location.replace("admin.html");
                   }
+              else{
+                   $scope.showAlert();
+                  }
             });
           }};
           $scope.showAlert = function() {
             $ionicPopup.alert({
-              title: 'Don\'t eat that!',
-              content: 'That\'s my sandwich'
+              title: 'Feil passord',
+              content: 'Feil passord, prøv igjen!'
             }).then(function(res) {
-              console.log('Thank you for not eating my delicious ice cream cone');
+              
             });
           };
       });

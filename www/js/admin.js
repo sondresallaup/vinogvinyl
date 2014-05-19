@@ -17,7 +17,7 @@ function printPlaylist(){
                 albumsString += '<li class="item">';
                 if(i == 0){
                     albumsString += "<b>";
-                    $("div#footer").html('<button class="button button-block button-positive" onclick="nextAlbum();">Neste album</button>');
+                    $("div#footer").html('<button class="button button-block button-dark" onclick="nextAlbum();">Neste album</button>');
                 }
                 albumsString += album.get("albumName") + " - " + album.get("artistName") + "</li>";
                 
@@ -25,7 +25,10 @@ function printPlaylist(){
                     albumsString += '</b>';   
                 }
             }
-            
+            if(results.length == 0){
+                    albumsString += '<br><br>Ingen album i køen!';
+                    $("div#footer").html('OBS! Legg til album!');
+                }
             
             $("div#nowplaying").html(albumsString);   
         }
@@ -54,8 +57,23 @@ function nextAlbum(){
               }});
     }
     });
-    
-    
-    
-    
+       
+}
+
+function bohemian(){
+    var BohemianAlbum = Parse.Object.extend("Album");
+    var bohemianQuery = new Parse.Query(BohemianAlbum);
+    bohemianQuery.equalTo("albumName","bohemian");
+
+    bohemianQuery.find({
+        success: function(results){
+             var album = results[0];
+            album.save(null, {
+              success: function(album) {
+                album.set("isPlayed", false);
+                album.save();
+              }});
+            
+        }
+    });
 }

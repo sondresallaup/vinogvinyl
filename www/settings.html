@@ -17,7 +17,13 @@
     <li class="item">Copyright 2014 - Den lille appfabrikken</li>
     <li class="item">Sondre Ingebrigtsen Sallaup</li>
      <a class="item item-icon-left" href="#" ng-click="showPasswordPrompt()"><i class="icon ion-ios7-locked"></i>Administrator</a>
-    <a class="item item-icon-left" href="logout.html"><i class="icon ion-ios7-unlocked"></i>Logg ut fra admin</a>
+    <script type="text/javascript">
+        if(localStorage.getItem('admin') == "true"){
+            document.writeln('<a class="item item-icon-left" href="logout.html"><i class="icon ion-ios7-unlocked"></i>Logg ut fra admin</a>');
+        }
+    
+    </script>
+    
 </ul>
         
         
